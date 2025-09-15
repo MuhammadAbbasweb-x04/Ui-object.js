@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product added</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.head{
+text-align: center;
+font-size: 2.5rem;
+font-family: 'Courier New', Courier, monospace;
+
+}
+
+
+.container{
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 20px;
+margin-top: 20px;
+
+
+}
+
+.card{
+border: 2px solid #000000;
+height: 210px;
+width: 250px;
+border-radius: 10px;
+padding: 20px 30px;
+}
+button{
+padding: 10px 13px;
+border-radius: 5px;
+border: none;
+background-color: hsl(9, 88%, 36%);
+color: hsl(0, 100%, 100%);
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+cursor: pointer;
+}
+    </style>
+</head>
+<body>
+<h1 id="head" >Cart items</h1>
+<div class="container" >
+
+
+   
+</div>
+
+
+<script>
+
+
+const box = document.querySelector(".container"); 
+const cart = JSON.parse(localStorage.getItem("cartitems"))
+for(let i =0; i < cart.length; i++){
+box.innerHTML +=` <div class="card">
+<h4>${cart[i].name}</h4>
+<br/>
+<p>$${cart[i].price}</p>
+<h4>${cart[i].description}</h4>
+<br/>
+<button onclick="addtoocart(${i})">Add to cart</button>
+</div>
+`
+}
+
+
+
+
+
+
+</script>
+    
+</body>
+</html>

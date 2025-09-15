@@ -26,14 +26,14 @@ button{
 padding: 10px 13px;
 border-radius: 5px;
 border: none;
-background-color: hsl(198, 99%, 69%);
-color: hsl(0, 0%, 3%);
+background-color: hsl(9, 88%, 36%);
+color: hsl(0, 100%, 100%);
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 cursor: pointer;
 }
 
 button:hover{
-background-color:  hsl(198, 96%, 64%) ;
+background-color:   hsl(9, 93%, 44%) ;
 
 }
 
@@ -41,4 +41,19 @@ background-color:  hsl(198, 96%, 64%) ;
 text-align: center;  
 font-size: 2rem;  
 font-family: sans-serif;
+}
+
+.container-btn{
+display: flex;
+justify-content: center;
+margin-top: 10px;
+margin-bottom: 5px;
+
+
+}
+
+#btn{
+padding: 10px 20px;
+font-size: 1.1rem;
+border-radius: 10px;
 }

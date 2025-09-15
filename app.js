@@ -115,10 +115,9 @@ div.innerHTML +=`
 <h4>${products[i].name}</h4>
 <br/>
 <p>$${products[i].price}</p>
-<br/>
 <h4>${products[i].description}</h4>
 <br/>
-<button onclick="addtoocart(${i})">Add too cart</button>
+<button onclick="addtoocart(${i})">Add to cart</button>
 </div>
 `
 }
@@ -132,14 +131,17 @@ else{
 selectitems.quantity = 1;
 cartitems.push(selectitems);    
 }
-console.log(cartitems)
+Swal.fire({
+  title: "Added cart!",
+  text: "You clicked the button!",
+  icon: "success"
+});
 }
 
 
 
-function productaddedcart(){
-
-
-    
+function gotocart(){
+localStorage.setItem("cartitems"  , JSON.stringify(cartitems));
+window.location = "gotocart.html"    
 }
 
